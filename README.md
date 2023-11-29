@@ -41,4 +41,17 @@ grep -i michael /etc/passwd
 userdel bob
 grep -i bob /etc/passwd
     
+
+apt list --installed
+
+systemctl list-units --type service
+rm /lib/systemd/system/nginx.service
+
+lsmod
+/etc/modprobe.d/blacklist.conf
+
+nestat -natp | grep PORT_NUMBER
+
+ufw allow from 135.22.65.0/24 to any port 9090 proto tcp
+ufw deny from any to 127.0.0.1 port 80
 ```
