@@ -24,6 +24,21 @@ Add a user context :
 openssl genrsa -out jim.key 2048
 openssl req -new -key jim.key -out jim.csr
 
+create certif with base64 csr
+
+
 kubectl config set-credentials jim --client-key=./jim.key --client-certificate=./jim.crt --embed-certs
 kubectl set-context jim --user=jim --cluster=kubernetes
+```
+
+
+#Limit linux access :
+```
+usermod -s /bin/nologin micahel
+grep -i michael /etc/passwd
+    michale:x:1001:1001::/home/michael:/bin/nologin
+
+userdel bob
+grep -i bob /etc/passwd
+    
 ```
