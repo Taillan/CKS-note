@@ -100,6 +100,13 @@ getpcaps 779 # 779 is thePID of a process
 kube-apiserver -h |grep enable-admission-plugins
 # For kubeAdm system :
 kubectl exec kube-apiserver-controlplane -n kube-system -- kube-apiserver -h |grep enable-admission-plugins
+```
 
+In `kube-apiserver.yaml` flag ``--enable-admission-plugins``
 
+# OPA 
+
+```shell
+#load rule
+curl -X PUT --data-binary @file.rego http://localhost:8181/v1/policies/policyname
 ```
