@@ -110,3 +110,34 @@ In `kube-apiserver.yaml` flag ``--enable-admission-plugins``
 #load rule
 curl -X PUT --data-binary @file.rego http://localhost:8181/v1/policies/policyname
 ```
+
+# SandBoxing
+
+
+## Kvisor
+
+handler: runsc
+```shell
+
+apiVeresion: node.k8s.io/v1beta1
+kind: RuntimeClass
+metadata:
+    name: gvisor
+handler: runsc
+
+k create -f 
+
+kind: Pod
+spec:
+    runtimeClassName: gvisor
+```
+rubn
+
+
+## Kata
+    handler : kata
+
+# mTls
+
+## Istio
+## Linkerd
