@@ -141,3 +141,27 @@ rubn
 
 ## Istio
 ## Linkerd
+
+
+# Supply Chain Security
+
+## Static analysis / Kubesec
+
+```
+    kubesec scan /file/to/scan >> report.scan
+```
+
+## CVE Identification / Trivy
+
+```
+trivy image --severity CRITICAL nginx:1.18.0
+trivy image --severity CRITICAL,HIGH nginx:1.18.0
+trivy image --ignore-unfixed nginx:1.18.0
+
+docker save nginx:1.18.0 > nginx.tar
+trivy image --input archive.tar
+```
+
+# Monitoring Logging & Runtive Security
+
+## Perform behavioral analytics of syscall process
