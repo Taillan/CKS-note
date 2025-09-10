@@ -1,5 +1,13 @@
 # CKS-note
 
+# V2
+
+Check RBAC
+```shell
+kubectl auth can-i get secrets --as jane
+```
+
+# V1
 Cilium Network policy plugin
 AppArmor Plugin in late
 
@@ -165,3 +173,4 @@ trivy image --input archive.tar
 # Monitoring Logging & Runtive Security
 
 ## Perform behavioral analytics of syscall process
+
